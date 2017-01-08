@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<br> <h3>Here are your todo list:</h3>
+
+<ul>
+    {% for todo in todos %}
+    <li><strong><a href="todo/{{todo.id}}">{{ todo.title }}</a></strong>: {{todo.status | is_Done }}</li>
+    {% endfor %}
+</ul>
+
+<br><a href="todo/new">Add New Item</a>
+
+{% endblock %}

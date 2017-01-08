@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>{{ todo.title }}
+<br><small>on {{ todo.date_created | humanize() }} </small>
+<br><small>Status: {{ todo.status | is_Done }}</small></h2>
+<p>{{ todo.desc }}</p>
+<h3><a href="{{ todo.id }}/update">Edit this task</a></h3>
+<h3><a href="{{ todo.id }}/delete">Delete this task</a></h3>
+
+
+{% endblock %}

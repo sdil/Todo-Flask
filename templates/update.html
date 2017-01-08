@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% from "_formhelpers.html" import render_field %}
+{% block content %}
+
+<h2>Adding new todo</h2>
+
+<form method="POST" action="">
+    {{ form.csrf }}
+    {{ render_field(form.title) }}
+    {{ render_field(form.desc) }}
+    {{ render_field(form.category) }}
+    {{ render_field(form.status) }}
+    <input type="submit" value="Add new todo" class="btn btn-primary">
+</form>
+
+{% endblock %}

@@ -1,6 +1,13 @@
 A simple todo list with CRUD functions in flask
 with SQLAlchemy ORM
 
+Requirement:
+- flask
+- flask-migrate
+- flask-sqlalchemy
+- flask_wtf
+- flask-humanize
+
 Todo:
 basic templating - DONE
 CRUD operations:

@@ -8,7 +8,7 @@ from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////flask/source/test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 app.config['SECRET_KEY'] = '123456' # enable csrf protection
 db = SQLAlchemy(app)
 humanize = Humanize(app)
@@ -53,13 +53,6 @@ class TodoForm(FlaskForm):
 
 class updateForm(TodoForm):
     status = BooleanField('Status')
-
-# Set the routes
-# index  DONE
-# detail DONE
-# create DONE
-# update DONE
-# delete DONE
 
 @app.template_filter('is_Done')
 def is_Done(status):
